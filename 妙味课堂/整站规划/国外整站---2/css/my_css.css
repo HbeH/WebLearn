@@ -1,0 +1,71 @@
+body,ul,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select { padding:0; margin:0; font-family:arial; }
+li { list-style:none; }
+img { border:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+body{background: url(../img/img/body_bg.png) repeat-x;}
+
+#top{margin: 0 auto;width: 960px;height: 30px;}
+.top_menu{float: left;}
+.top_menu li{float: left;background: url(../img/img/top_ico.png) right 12px no-repeat;padding-right: 13px;margin-right: 15px;line-height: 30px;font-size: 16px;}
+.top_menu a{color: #c0c0c0;}
+.top_menu .no_doc{padding-left: 0px;margin-left: 0px;background:none;}
+
+.top_bar{float: right;}
+.top_bar li{float: left;line-height: 30px;height: 30px;}
+.top_bar .help{background: url(../img/img/top_ico.png) -0px -46px no-repeat;padding-left: 38px;margin-right: 30px;}
+.top_bar .iphone{background: url(../img/img/top_ico.png) 6px -16px no-repeat;padding-left: 38px;margin-right: 30px;}
+.top_bar a{color: #ffffff;font-weight: bold;}
+.top_bar .space{margin-right: 10px;}
+
+#head{width: 960px;height: 100px; margin: 0px auto;position: relative;background: url(../img/img/header_bg.png);}
+#shopping{width: 260px;height: 100px;background: url(../img/img/shopping_bg.png) no-repeat;position: relative;}
+#shopping p{padding: 32px 0 0 78px;color: whitesmoke;font-size: 20px;}
+#shopping a{background: url(../img/img/shopping_bg.png) 0 -100px no-repeat;width: 114px;height: 34px;display: block;position: absolute;top: 61px;left: 100px;line-height: 23px;text-decoration: none;color:#ffc220;text-align: center;}
+#shopping a:hover{color: #ff7e00;text-decoration: none;}
+
+#head h1{position: absolute;top: 0;left: 50%;margin-left: -114px;}
+#head .search{top: 32px;right: 0;}
+/*顶部右边搜索框处理*/
+.search {background: url(../img/img/search.png) no-repeat;width: 293px;height: 34px;position: absolute;}
+/*消除一些边框的处理   搜索边框的处理*/
+.search .text{background: none;border: none;width: 230px;height: 30px;position: absolute;top: 0;left: 20px;outline: none;font-size: 13px;color: #666;}
+/*Go按钮的处理*/
+.search .button{background: none;border: none;width: 41px;height: 31px;position: absolute;top: 0;right: 0;}
+
+#nav {width: 960px;height: 44px;margin: 8px auto 20px;}
+#nav *{float: left;height: 28px;}
+#nav li{margin-right: 20px;}
+#nav a{}
+#nav strong{line-height: 28px;font-style: normal;}
+#nav span{color: #FFFFFF;font-size: 16px;}
+
+#nav a:hover,#nav .active a{background: url(../img/img/nav_active_bg.png) 0 -56px repeat-x;}
+#nav a:hover strong,#nav .active strong{background:url(../img/img/nav_active_bg.png) no-repeat;}
+#nav a:hover span,#nav .active span{background:url(../img/img/nav_active_bg.png)right -28px no-repeat;}
+
+#content{width: 1000px;margin: 24px auto 0;background: url(../img/img/content_bg.gif) repeat-y -1000px 0;}
+#content_top{width: 1000px;background: url(../img/img/content_bg.gif)no-repeat;}
+#content_bottom{width: 1000px;background: url(../img/img/content_bg.gif)  -2000px 0  no-repeat bottom;}
+
+
+/*--广告界面的布置 设置广告背景的位置*/
+#ad{width: 940px;height: 300px; margin: 0 auto;position: relative;top: 10px;}
+#ad ul,#ad li,#ad h2,#ad p,#ad .bg{position: absolute;}
+#ad ul{top: 0;left: 0;}
+#ad li{top: 0;left: 0;}
+/*广告底部黑色背景标题设置*/
+#ad h2{width: 264px;height: 52px;color: #ffc600;z-index: 3;position: absolute;left: 36px;bottom: -10px;}
+/*广告底部黑色背景里面文字设置*/
+#ad p{position:absolute;bottom: 10px;left: 264px;z-index: 3;color: #ffcccc;font-size: 13px;line-height: 16px;width: 640px;}
+/*广告底部黑色背景设置*/
+#ad .bg{width: 940px;height: 52px;background: black;filter: alpha(opacity:80);opacity: 0.8;bottom: 0;left: 0;z-index: 1;}
+
+/*#ad { width:940px; height:300px; position:relative; margin:0 auto; }
+#ad ul, #ad li, #ad h2, #ad p { position:absolute; z-index:1; }
+#ad ul { top:0; left:0; z-index:1; }
+#ad li { top:0; left:0; filter:alpha(opacity=0); opacity:0;}
+#ad h2 { left:0; bottom:8px; z-index:3; width:268px; text-align:center; font-size:25px; color:#ffc600; }
+#ad p { left:268px; bottom:7px; z-index:3; color:#fcc; font-size:13px; line-height:16px; width:630px; }*/
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{width: 400px;height: 430px;border: 1px solid black;background: antiquewhite;display: inline-block;}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">
+			
+		</div>
+		<br />
+		<input type="text" name="myText" id="myText" value="" />
+		<input type="button" name="myButton" id="myButton" value="发送" />
+		
+		<script type="text/javascript">
+			var myText = document.getElementById('myText');
+			var myBut = document.getElementById('myButton');
+			var mySpan = document.getElementById('mydiv');
+			
+			myBut.enterModalStateWithWindow = Show;
+			
+			function Show () {
+				
+					mySpan.innerHTML +=myBut.value + ':'+ myText.value+ '<br />';
+					myText.value = '';
+			}
+		</script>
+	</body>
+</html>
