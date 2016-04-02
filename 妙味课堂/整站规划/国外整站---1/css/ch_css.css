@@ -1,0 +1,155 @@
+/*常规移除*/
+body,ul,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select { padding:0; margin:0; font-family:arial; }
+li { list-style:none; }
+img { border:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/*设置背景*/
+body{background: #fff url(../img/body_bg.png) repeat-x;}
+
+/*最上面 Top处理*/
+/*顶部的宽度，高度，margin: 0 auto;设置为居中显示*/
+#top{width: 960px;height: 30px;margin: 0 auto;}
+
+.top_menu{float: left;}
+/*Account Sign InRegisterBuyers Guide文字间的点号处理*/
+.top_menu li{float: left;margin: 4px;line-height: 20px;background: url(../img/top_ico.png) right 10px no-repeat;font-size: 14px;padding-right: 18px;margin-right: 15px;}
+.top_menu a{color: #c0c0c0;}
+/*最后一个没有点号*/
+.top_menu .no_doc{background: none;padding-right: 0;margin-right: 0;}
+
+/*顶部右边的iphone LiveHelp处理*/
+.top_bar{float: right;}
+/*设置顶部右边的iphone LiveHelp的宽高*/
+.top_bar li{float: left;height: 30px;line-height: 30px;color: white;font-size: 13px;font-weight: bold;}
+.top_bar .iphone{background: url(../img/top_ico.png) 3px -16px no-repeat;padding: 0 38px 0;}
+.top_bar .help{background: url(../img/top_ico.png) 0px -46px no-repeat;padding: 0 38px 0;}
+.top_bar a{color: white;}
+/*设置顶部右边的两面旗子的间距*/
+.top_bar .space{margin-left: 10px;}
+
+/*Logo部分处理*/
+#head{width: 960px;height: 100px;margin: 0 auto;position: relative;background: url(../img/header_bg.png);}
+
+/*顶部右边搜索框位置处理*/
+#head .search{top: 32px;right: 0;}
+#shopping{width: 260px;height: 100px;background: url(../img/shopping_bg.png) no-repeat;position: relative;}
+/*0 items in your bag文字处理*/
+#shopping p{color:#f7f7f7;font-size: 20px;padding: 33px 0px 0 76px ;}
+/*Check Out点击框处理*/
+#shopping a{background: url(../img/shopping_bg.png) 0px -100px no-repeat;height: 24px;width: 114px;display: block;position: absolute;top: 63px;left: 96px;font-size: 15px;color:#ffc220;text-align: center;line-height: 23px;}
+#shopping a:hover{color: #ff7e00;text-decoration: none;}
+/*大Logo的居中处理 ECOMMERCE WEBSITE*/
+#head h1{width: 238px;position: absolute;left: 50%;top: 0;margin-left: -119px;}
+
+/*顶部右边搜索框处理*/
+.search {background: url(../img/search.png) no-repeat;width: 293px;height: 34px;position: absolute;}
+/*消除一些边框的处理   搜索边框的处理*/
+.search .text{background: none;border: none;width: 230px;height: 30px;position: absolute;top: 0;left: 20px;outline: none;font-size: 13px;color: #666;}
+/*Go按钮的处理*/
+.search .button{background: none;border: none;width: 41px;height: 31px;position: absolute;top: 0;right: 0;}
+
+/*--标签栏 HOME MENS'S' 导航*/
+#nav{width: 960px;height: 36px;margin: 0 auto;}
+#nav *{float: left;height: 28px;}
+#nav li{margin-right: 30px;padding-top: 8px;}
+#nav a{text-decoration:none; font-size:15px; font-family:Arial; cursor:pointer;}
+#nav strong{font-weight: normal;}
+#nav span{color: #ffffff;line-height: 28px;}
+
+/*--标签栏 HOME的默认激活状态导航*/
+#nav a:hover,#nav .active a {display: block;background: url(../img/nav_active_bg.png) 0 -56px repeat-x;}
+#nav a:hover strong,#nav .active strong{background: url(../img/nav_active_bg.png) no-repeat;display: block;}
+#nav a:hover span,#nav .active span{background: url(../img/nav_active_bg.png) right -28px no-repeat;display: block;} 
+
+/*--往下平铺界面*/
+#content{width: 1000px;margin: 24px auto 0;background: url(../img/content_bg.gif) repeat-y -1000px 0;}
+/*椭圆处理*/
+#content_top{width: 1000px;background:url(../img/content_bg.gif) no-repeat;}
+/*颜色渐变的处理*/
+#content_bottom{width: 1000px;background: url(../img/content_bg.gif) -2000px 0 no-repeat bottom;}
+
+/*--广告界面的布置 设置广告背景的位置*/
+#ad{width: 940px;height: 300px; margin: 0 auto;position: relative;top: 10px;}
+#ad ul,#ad li,#ad h2,#ad p,#ad .bg{position: absolute;}
+#ad ul{top: 0;left: 0;}
+#ad li{top: 0;left: 0;}
+/*广告底部黑色背景标题设置*/
+#ad h2{width: 264px;height: 52px;color: #ffc600;z-index: 3;position: absolute;left: 36px;bottom: -10px;}
+/*广告底部黑色背景里面文字设置*/
+#ad p{position:absolute;bottom: 10px;left: 264px;z-index: 3;color: #ffcccc;font-size: 13px;line-height: 16px;width: 640px;}
+/*广告底部黑色背景设置*/
+#ad .bg{width: 940px;height: 52px;background: black;opacity: 0.8;bottom: 0;left: 0;z-index: 1;}
+
+/*广告下面的主要商品图*/
+#main{width: 942px;margin: 32px auto 0;}
+/*左边的列表*/
+#side{width: 210px;float: left;}
+/*被包裹的商品区域*/
+#wrap{width: 706px;float: right;}
+/*清楚浮动，因为父级没浮动的话，包不住子集*/
+.clear {zoom: 1}
+.clear:after {content:'';display: block;clear: both;}
+
+/*/*左边的列表表头的处理*/
+.modle_menu {width: 210px;}
+/*左边列表文字的处理 与平铺框  <h2><strong><span>
+ h2 最外面的为平铺 
+ strong 为左边的图像
+ span为最右边图像 最后要加上 right 位置px
+ strong span 与h2在一起需要：display：block
+ 
+ <a><strong><span>与上面差不多，只不过没有display:block  不知道为什么？？？？？？
+ * */
+.modle_menu h2{height: 29px;display: block;background: url(../img/module_menu_bg.png) repeat-x 0 -58px;font-size: 15px;color: #FFFFFF;line-height: 28px;text-align: center;}
+.modle_menu strong{height: 29px;display: block;background: url(../img/module_menu_bg.gif) no-repeat;}
+.modle_menu span{height: 29px;display: block;background: url(../img/module_menu_bg.gif) no-repeat right -29px;}
+
+/*左边列表里面的处理*/
+.menu_list{background: url(../img/list_bg.gif)repeat-y;}
+/*ul为全体设置 padding-top: 18px;padding-bottom: 15px;padding-right: 8px;padding-left: 8px;  可以写成  padding:18px 8px 15px   如果修改了间距。则相应的宽高也要修改
+ .menu_list li{width: 220px;}  要改成  194px   这个list 下面的li不设置宽度也是可以的，因为
+ 图片本身就有那个宽度，再设置的话就是画蛇添足
+ * */
+.menu_list ul{background: url(../img/list_bg.gif) no-repeat -210px bottom;padding:18px 8px 15px }
+/*这是个坑啊。。。 字体设置不要写在list，要写在包裹他的地方*/
+/*.menu_list li{font-size: 12px;width: 192px;}*/
+/*.menu_list li{width: 192px;}*/
+.menu_list a{display: block;border-bottom: 1px solid #FFFFFF;text-decoration: none;padding: 6px 0 6px 42px;font-weight: bold;font-size: 12px;}
+/*触摸的时候，添加不同的底色与背景颜色*/
+.menu_list a:hover{background: #f5bf10;border-bottom: 1px solid #b20e00;}
+
+/*join 平铺的背景*/
+.modle_join{margin-top: 14px;background: url(../img/list_bg.gif) repeat-y -630px 0;}
+/*join 上面的椭圆*/
+.modle_joinT{width:210px;background: url(../img/list_bg.gif) no-repeat -420px 0;}
+/*join 下面的椭圆*/
+.modle_joinB{width:210px;background: url(../img/list_bg.gif) no-repeat -840px bottom;}
+/*join p标签内字体的处理*/
+.modle_joinB p{padding-top: 16px;font-size: 15px;color: #666666;width: 179px;padding-left: 15px;}
+/*join 输入框的处理*/
+.modle_joinB .join_text{margin-top: 13px;margin-left: 16px;width: 177px;height: 27px;border-top: 1px solid #9c9c9c;border-left:1px solid c0c0c0;}
+/*join join按钮的处理*/
+.modle_joinB .join_button{background: url(../img/shopping_bg.png) no-repeat 0 -145px;display: block;width: 88px;height: 26px;margin-top: 8px;margin-left: 60px;font-size: 15px;color: #FFFFFF;position: relative;}
+/*输入框下面的列表设置*/
+.modle_joinB ul{padding-top: 14px;padding-left: 8px;padding-right: 8px;}
+/*文字不能居中对齐    ？？？？？？？？？*/
+.modle_joinB li{border-top: 1px solid #ffffff;height: 45px;padding-left: 50px;font-size: 13px;line-height: 18px;width: 124px;}
+.space1{background: url(../img/shopping_bg.gif) no-repeat 0 6px;line-height: 45px;height:45px;padding-top:5px; }
+.space2{background: url(../img/shopping_bg.gif) no-repeat 0 -40px;padding-top:5px; line-height:18px;height:38px;}
+.space3{background: url(../img/shopping_bg.gif) no-repeat 0 -90px;padding-top:5px; line-height:18px;height:45px;}
+.space4{background: url(../img/shopping_bg.gif) no-repeat 0 -138px;padding-top:5px; }
+
+/*支付大图标*/
+.paypal{margin-top: 34px;}
+
+
+
+
+
+
+
+
+
+

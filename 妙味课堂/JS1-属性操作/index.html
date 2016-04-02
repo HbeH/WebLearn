@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/new_file.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="button" name="" id="button" value="提交" />
+		<input type="text" name="" id="text" value="" />
+		<select name="地区" id = "whereii">
+			<option value="北京">北京</option>
+			<option value="上海">上海</option>
+			<option value="麻城">麻城</option>
+		</select>
+	</body>
+	
+	<script type="text/javascript">
+		
+		var myBut = document.getElementById("button");
+		var myText = document.getElementById("text");
+		var myWhere = document.getElementById("whereii");
+			
+		myBut.onclick = function () {
+//				alert(myText.value + myWhere.value);
+				myBut.value = "sublimt";
+				myText.value = myWhere.value;
+		}
+		
+	</script>
+</html>

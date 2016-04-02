@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="myText" id="myText" value="" />
+		<input type="button" name="sub" id="sub" value="submit" />
+		
+		<img id="myimg" src="img/1.jpg"/>
+		<p id="pp">hello，caihang</p>
+		
+		<script type="text/javascript">
+		
+			var myBut = document.getElementById("sub");
+			var myImg = document.getElementById("myimg");
+			var myText = document.getElementById("myText");
+			var mypp = document.getElementById('pp');
+			
+			myBut.onclick = Show;
+			
+			function Show () {
+				myImg.src = myText.value;
+				mypp.innerHTML = myText.value;
+			}
+		
+		</script>
+	
+	</body>
+</html>

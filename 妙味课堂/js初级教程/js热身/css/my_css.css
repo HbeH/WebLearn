@@ -1,0 +1,9 @@
+/*常规移除*/
+body,ul,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select { padding:0; margin:0; font-family:arial; }
+li {list-style:none;}
+img { border:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+.list a{width: 40px;height: 20px;background: grey;margin-left: 100px;color: whitesmoke;border: 1px solid black;}
+.list ul{width: 100px;height: 100px;background: yellow;margin-left: 100px;border: 1px solid black;text-align: center;line-height: 33px;display: none;}
