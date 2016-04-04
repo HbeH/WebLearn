@@ -133,7 +133,7 @@ body{background: #fff url(../img/body_bg.png) repeat-x;}
 /*join join按钮的处理*/
 .modle_joinB .join_button{background: url(../img/shopping_bg.png) no-repeat 0 -145px;display: block;width: 88px;height: 26px;margin-top: 8px;margin-left: 60px;font-size: 15px;color: #FFFFFF;position: relative;}
 /*输入框下面的列表设置*/
-.modle_joinB ul{padding-top: 14px;padding-left: 8px;padding-right: 8px;} 
+.modle_joinB ul{padding-top: 14px;padding-left: 8px;padding-right: 8px;}
 /*文字不能居中对齐    ？？？？？？？？？*/
 .modle_joinB li{border-top: 1px solid #ffffff;height: 45px;padding-left: 50px;font-size: 13px;line-height: 18px;width: 124px;}
 .space1{background: url(../img/shopping_bg.gif) no-repeat 0 6px;line-height: 45px;height:45px;padding-top:5px; }
@@ -145,56 +145,11 @@ body{background: #fff url(../img/body_bg.png) repeat-x;}
 .paypal{margin-top: 34px;}
 
 
-/*<!--商品列表 被包裹的区域-->*/
-/*<!--商品列表 被包裹的区域 sort by 列表的实现-->*/
-.sort{height: 20px;}
-.sort dl{float: left;}
-.sort dt{float: left;padding-right: 3px;font-size: 12px;color: #747474;}
-.sort dd{position: relative;float: left;margin-right: 12px;;}
-/*已经存在的字体  Ascending  Product 的处理*/
-.sort dd h2{width: 107px;height: 17px;border: 1px solid #cccccc;text-indent: 5px;font-size: 12px;color: #C0C0C0;font-style: normal;}
-.sort dd a{width: 19px;height: 19px;position: absolute;top: 0px;left: 90px;background: url(../img/shopping_bg.png) no-repeat 0 -376px;z-index: 2;}
-/*触摸a以后的处理*/
-.sort dd a:hover{background: url(../img/shopping_bg.png) no-repeat -19px -376px;}
-.sort ul{border: 1px solid #cccccc;background: #FFFFFF;text-indent: 6px;z-index: 1;display: none;}
-.sort li{font-size: 12px;line-height: 20px;cursor: pointer;}
-/*给选择的li加一个背景*/
-.sort .active{background: #099;color: #FFFFFF;}
-/*<!--右边的时间-->的处理*/
-.sort p{float: right;color: #747474;font-size: 12px;}
-.sort p strong{color: #999999;padding-right: 9px;}
-.sort p span{padding-right: 9px;}
-.sort .color_sty{color: #b20e00;}
 
-/*图片列表的处理*/
-.pic_list{width: 706px;overflow: hidden;}
-.pic_list h2,#my_scorll h2 {font-size: 18px;color: #666666;padding-top: 27px;padding-bottom: 17px;}
-.pic_list ul{width: 735px;}
-.pic_list li{float: left;width: 182px;height: 200px;}
-.pic_list h3{color: #666666;font-size: 15px;}
-.pic_list a{width: 154px;height: 114px;border: 1px solid #c6c6c6;display:block;margin-bottom: 10px;}
-.pic_list a:hover{border: 1px solid #663;}
-/*给他们各自的行高，自行处理*/
-.pic_list p{font-size: 13px;line-height: 12px;}
-.pic_list span{color: #b20e00;line-height: 10px;}
 
-/*翻页的处理*/
-.pasge{text-align: center;border-bottom: 2px solid #cdcdc8;padding-bottom: 5px;}
-.pasge a{color: #b20e00;padding: 0 8px;text-decoration: none;font-size: 12px;line-height: 20px;text-align: center;height: 20px;display: inline-block;}
-.pasge a:hover,.pasge .active{background: #b20e00;color: #FFFFFF;}
-/*专门为 NEXT LAST处理*/
-.pasge span{font-family: "宋体";}
 
-/*<!--翻页下面 FEATURED PRODUCTS处理-->*/
-.scorll{background: url(../img/scroll_bg.gif) 0 -485px repeat-x;height: 196px;position: relative;}
-.scorll_left{background: url(../img/scroll_bg.gif) 0 -93px no-repeat;height: 196px;}
-/*一定要记住放高*/
-.scorll_right{background: url(../img/scroll_bg.gif) right -289px no-repeat;height: 196px;}
-/*两个按钮的处理*/
-.prev{width: 35px;height: 44px;background: url(../img/scroll_bg.gif) no-repeat 0 1px;position:absolute;top: 66px;left: 0px;}
-.next{width: 35px;height: 44px; background: url(../img/scroll_bg.gif) no-repeat 0 -43px;position: absolute;top: 66px;right: 0px;}
 
-.scorll_right ul{}
-.scorll_right li{float: left;}
-.scorll_right a{}
-.scorll_right p{}
+
+
+
+
