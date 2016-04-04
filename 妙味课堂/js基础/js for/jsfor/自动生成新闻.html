@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="list">
+		</ul>
+		<input id = 'button' type="button" name="" id="" value="秽土转生" />
+	</body>
+	
+	<script type="text/javascript">
+		
+		var arr= 
+		[	
+			'鸣人大战外星人',
+			'火影忍者疾风传',
+			'万象天引-卡卡西',
+			'诛仙世界欢迎你',
+			'哈哈，早点辞职，追寻自己的梦想，去congding'
+		]
+	
+		var my_list = document.getElementById('list');
+		var my_button = document.getElementById('button');
+		
+		my_button.onclick = function  ()
+		{
+			for (var i = 0; i < arr.length;++i) 
+			{
+				my_list.innerHTML += '<li>' + arr[i] + '</li>';
+			}	
+		}
+	</script>
+</html>
