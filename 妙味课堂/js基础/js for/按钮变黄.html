@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="111111" />
+		<input type="button" name="" id="" value="222222" />
+		<input type="button" name="" id="" value="333333" />
+	</body>
+	<script type="text/javascript">
+		var my_but = document.getElementsByTagName('input');
+		var that = null;
+		
+		for (var i = 0; i < my_but.length; ++i) {
+//			my_but[i].onclick  = function  () {
+//				that = this;
+//				f1();
+//			}
+
+my_but[i].onclick = f1;
+		}
+		
+			function f1 () {
+//				that.style.background = 'yellow';
+this.style.background = 'red';
+			}
+	</script>
+</html>
