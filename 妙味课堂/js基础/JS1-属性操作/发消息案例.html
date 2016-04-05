@@ -20,21 +20,12 @@
 			var myBut = document.getElementById('myButton');
 			var mySpan = document.getElementById('mydiv');
 			
-			myBut.onclick = Show;
+			myBut.enterModalStateWithWindow = Show;
 			
 			function Show () {
 				
-					
-					if(myText.value == '')
-					{
-						
-					}
-					else
-					{
-						mySpan.innerHTML +=myBut.value + ':'+ myText.value+ '<br />';
-						myText.value = '';
-					}
-					
+					mySpan.innerHTML +=myBut.value + ':'+ myText.value+ '<br />';
+					myText.value = '';
 			}
 		</script>
 	</body>
