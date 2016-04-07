@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input{width: 100px;height: 30px;}
+		</style>
+	</head>
+	<body id = 'Body'>
+		<input type="button" name="" id="" value="切换背景" />
+		<input type="button" name="" id="" value="暂停" />
+		<img  id = 'my_img' src="img/1.jpg"/>
+	</body>
+	<script type="text/javascript">
+		var my_but = document.getElementsByTagName('input');
+		var my_img = document.getElementsByTagName('img');
+		
+		var i = 0;
+		var temp = null;
+		var img_arr = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"];
+		
+		my_but[0].onclick = function () {
+			
+			clearInterval(temp);
+			temp = setInterval(cheangImg,1000);
+		}
+		
+		my_but[1].onclick = function () {
+			
+			clearInterval(temp);
+		}
+		
+		function cheangImg () {
+			my_img[0].src = img_arr[i];
+			++i;
+			
+			if(i === img_arr.length)
+			{
+				i = 0;
+			}
+		}
+	</script>
+</html>
