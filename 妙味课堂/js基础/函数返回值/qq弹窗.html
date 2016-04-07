@@ -20,27 +20,15 @@
 	<script type="text/javascript">
 		var div1 = document.getElementById('div1');
 		var div2 = document.getElementById('div2');
-		var temp = null;
 		
-		div1.onmouseover = showme;
-		
-		div1.onmouseleave = set_time;
-		
-//		div2.onmouseover = showme;
-//		
-//		div2.onmouseleave = set_time;
-		
-		function showme () {
-			clearTimeout(temp)
+		div1.onmouseover = function () {
+			div2.style.display = 'none';
 			div2.style.display = 'block';
 		}
-		function  set_time() {
-			temp = setTimeout(closeme,2000);
-		}
 		
-		function closeme() {
+		div1.onmouseleave = setTimeout(function () {
 			div2.style.display = 'none';
-		}
+		},2000);
 		
 	</script>
 </html>
