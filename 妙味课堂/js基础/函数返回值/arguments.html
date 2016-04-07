@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		function add_me () {
+			
+			var kk = 0;
+			for (var i = 0; i < arguments.length; ++i) {
+				kk += i;
+			}
+			
+			return kk;
+		}
+		
+		alert(add_me(1,2,3,4));
+		alert(add_me(2,2,2));
+	</script>
+</html>

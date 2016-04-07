@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#divv{width: 200px;height: 200px;background: yellow;}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="hh" id="" value="kk" />
+		<div id = 'divv'></div>
+	</body>
+	
+	<script type="text/javascript">
+		
+		var mtbut = Get_ID('input');
+		var mydiv = Get_ID('div');
+		
+		
+		function Get_ID (str) {
+			return document.getElementsByTagName(str)
+		}
+	
+		mtbut[0].onclick = function () {
+			
+			mydiv[0].style.background = 'red';
+		}
+	</script>
+</html>
