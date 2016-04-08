@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#world{width: 300px;height: 200px;margin: 30px auto;background: yellow;border: 20px solid gainsboro;}
+		</style>
+	</head>
+	<body>
+		<div id="world">
+			我们每期会整理10道Unity技术相关的问题，大家在帖子里回复作答。
+			活动截止日期为每周四的23：59分。周五进行分数评定，并且公布获奖名单。
+			分数将根据下列标准综合评定：
+			1，回答时间
+			2，回答题数
+			3，答案正确率
+			4，答案工整度（回帖格式是否清晰易读，代码是否放在代码块内） 
+			<a  href="#">收缩>></a>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		var my_div = document.getElementById('world');
+		var old_str = my_div.innerHTML;
+		var a_onclick = my_div.getElementsByTagName('a');
+		var other = false;
+		
+		a_onclick[0].onclick = function  ()
+		{
+			alert(a_onclick.length)
+			if(!other)
+			{
+				OncMe('展开>>',true);
+				alert(other)
+			}
+			else if(other)
+			{
+				OncMe('收缩>>',false);
+			}
+		}
+		
+		function  OncMe (str,th) {
+			if(other)
+			{
+				my_div.innerHTML = old_str.substring + '<a href="#">' + str + '</a>';
+				
+			}
+			else
+			{
+				my_div.innerHTML = old_str.substring(0,22) + '<a href="#">' + str + '</a>';
+				alert(a_onclick.length);
+			}
+
+			other = th
+		}
+	</script>
+</html>
