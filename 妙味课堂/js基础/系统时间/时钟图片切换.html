@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id = 'time'>There:</p>
+	</body>
+	<script type="text/javascript">
+	
+	
+		var my_body = document.body;
+		var my_img = my_body.getElementsByTagName('img');
+		var system_time = new Date();
+		var hours = system_time.getHours();
+		var minentus = system_time.getMinutes();
+		var second = system_time.getSeconds();
+		
+		Get_System_Time();
+		
+		var temp_time = setInterval(Get_System_Time,1000);
+		
+		for (var i = 0; i < 8;++i) {
+			my_body.innerHTML += '<img src="img/0.JPG"/>';
+//			Img_time ();
+		}
+	
+		var temp_img = setInterval(Img_time,1000);
+		
+		function  Get_System_Time () {
+			
+			system_time = new Date();
+			hours = system_time.getHours();
+			minentus = system_time.getMinutes();
+			second = system_time.getSeconds();
+			hours = parseInt(hours) < 10 ? '0' + hours : hours;
+			second = parseInt(second) < 10 ? '0' + second :second;
+
+			var system_time_str = hours +':' +minentus + ':' + second;
+			
+			var p = my_body.getElementsByTagName('p');
+			p[0].innerHTML = 'Thers:'
+			p[0].innerHTML += system_time_str;
+		}
+	
+		function Img_time () 
+		{
+			change_Time(hours,0,1);
+			change_Time(minentus,3,4);
+			change_Time(second,6,7);
+			
+			my_img[2].src = 'img/colon.JPG';
+			my_img[5].src = 'img/colon.JPG';
+
+		}
+		
+		function change_Time (str,fisrt,last) {
+			if(parseInt(str) < 10)
+			{
+				my_img[fisrt].src = 'img/0.JPG';
+				my_img[last].src = 'img/' + parseInt(str) + '.JPG';
+			}
+			else
+			{
+				my_img[fisrt].src = 'img/' + parseInt(str/ 10) + '.JPG';
+				my_img[last].src = 'img/' + parseInt(str % 10) + '.JPG';
+			}
+		}
+		
+	</script>
+</html>
