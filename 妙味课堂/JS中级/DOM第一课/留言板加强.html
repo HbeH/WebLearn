@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="" />
+		<input type="button" name="" id="" value="留言" />
+		<input type="button" name="" id="" value="批量删除" />
+		<ul id = 'myul'></ul>
+	</body>
+	<script type="text/javascript">
+		var myInput = document.getElementsByTagName('input');
+		var myUl = document.getElementById('myul');
+		var the_li_count = 0;
+		var my_li = myUl.getElementsByTagName('li');
+		
+		myInput[1].onclick = function  () {
+	
+			if(my_li.length == 4)
+			{
+
+				for (var i = my_li.length; i > 1; --i) {
+					
+					my_li[i - 1].innerHTML = my_li[i - 2].innerHTML;
+				}
+
+				my_li[0].innerHTML = myInput[0].value;
+			}
+			else
+			{
+				var myli = document.createElement('li');
+				myli.innerHTML = myInput[0].value;
+				
+				if(myUl.children[0] == null)
+				{
+					myUl.appendChild(myli);
+				}
+				else
+				{
+					myUl.insertBefore(myli,myUl.children[the_li_count]);
+				}
+			}
+		}
+		
+		for (var i = 0; i < my_li.length; ++i) 
+		{
+			alert(1)
+			my_li[i].onclick = function () {
+				this.style.background = 'yellow';
+			}
+		}
+	</script>
+</html>

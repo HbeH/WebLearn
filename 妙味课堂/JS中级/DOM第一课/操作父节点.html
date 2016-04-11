@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id = 'ul1'>
+			<li>1111 <a href="#">隐藏</a></li>
+			<li>2222 <a href="#">隐藏</a></li>
+			<li>3333 <a href="#">隐藏</a></li>
+			<li>4444 <a href="#">隐藏</a></li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var Va = document.getElementsByTagName('a');
+		
+		for (var i = 0; i < Va.length; ++i) {
+			Va[i].onclick = function  () {
+				this.parentNode.style.display = 'none';
+			}
+			
+		}
+	</script>
+</html>

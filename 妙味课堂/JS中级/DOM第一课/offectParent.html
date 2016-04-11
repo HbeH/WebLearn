@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{padding: 50px 40px;}
+			#div1{background: red;}
+			#div2{background: yellow;}
+			#div3{background: blue;position: relative;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div id="div3">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div3 = document.getElementById('div3');
+		
+		alert(div3.offsetParent.name)
+	</script>
+</html>

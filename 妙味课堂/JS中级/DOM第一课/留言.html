@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="text" id="text" value="" />
+		<input type="button" name="button" id="button" value="留言" />
+		
+		<ul id="myul">
+			
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var myInput = document.getElementsByTagName('input');
+		var myul = document.getElementsByTagName('ul');
+		
+		myInput[1].onclick = function  () {
+			
+			if(myInput[0].value === '')
+			{
+				return;
+			}
+			
+			var oli = document.createElement('li');
+//			oli.innerHTML += '<li>' + myInput[0].value + '</li>';
+		
+			oli.innerHTML = myInput[0].value;
+			
+			var oA = document.createElement('a');
+			oA.innerHTML = '删除';
+			oA.href = '#';
+			oli.appendChild(oA);
+			
+			oA.onclick = function  () {
+				
+				myul[0].removeChild(this.parentNode);
+			}
+//			添加元素
+			if(myul[0].children[0])
+			{
+				myul[0].insertBefore(oli,myul[0].children[0]);
+			}
+			else
+			{
+					myul[0].appendChild(oli);
+			}
+		
+			
+			myInput[0].value = '';
+		}
+	</script>
+</html>

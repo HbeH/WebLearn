@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{padding: 40px 50px;}
+			#div1{background: red;}
+			#div2{background: yellow;position: relative;}
+			#div3{background: blue;position: relative;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div id="div3">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div3 = document.getElementById('div3');
+		
+		var obj = div3;
+		var temp = 0;
+		
+//		while(obj)
+//		{
+//			temp += obj.offsetTop;
+//			obj = obj.offsetParent;
+//		}
+//		
+//		alert(temp)
+		temp = GetPos(div3);
+		
+		alert(temp.left)
+		
+		function GetPos (obj) {
+			
+			pos = {'left':0,'right':0}
+			
+			while (obj){
+				pos.left += obj.offsetLeft;
+				pos.top += obj.offsetTop;
+				
+				obj = obj.offsetParent;
+			}
+			
+			return pos;
+		}
+	</script>
+</html>
