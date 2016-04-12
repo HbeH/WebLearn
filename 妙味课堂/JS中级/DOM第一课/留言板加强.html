@@ -17,7 +17,7 @@
 		var my_li = myUl.getElementsByTagName('li');
 		
 		myInput[1].onclick = function  () {
-	
+
 			if(my_li.length == 4)
 			{
 
@@ -39,17 +39,40 @@
 				}
 				else
 				{
-					myUl.insertBefore(myli,myUl.children[the_li_count]);
+					myUl.insertBefore(myli,myUl.children[0]);
+				}
+			}
+			
+			TheLi();
+			
+		}
+		
+		var need_Remove;
+		
+		function TheLi () {
+			for (var i = 0; i < my_li.length; ++i) 
+			{
+				my_li[i].count = i;
+				my_li[i].onclick = function () {
+					this.style.background = 'yellow';
+					Remove(this.count)
+					alert('remove')
 				}
 			}
 		}
 		
-		for (var i = 0; i < my_li.length; ++i) 
+		myInput[2].onclick = ClearMe;
+		
+		function  Remove(var i) {
+		
+			need_Remove.append(need_Remove_Arr)
+		}
+		
+		function  ClearMe (count) 
 		{
-			alert(1)
-			my_li[i].onclick = function () {
-				this.style.background = 'yellow';
-			}
+			
+			myUl.removeChild(my_li[count]);
+			alert(my_li.length)
 		}
 	</script>
 </html>
