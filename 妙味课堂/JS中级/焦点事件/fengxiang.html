@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{height: 200px;width: 100px;background: red;position: absolute;top: 100px;left: -100px;}
+			#div2{height: 70px;width: 30px;background: black;color: white;text-align: center;position: absolute;right: -30px;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var mydiv1 = document.getElementById('div1');
+		
+		mydiv1.onmouseover = function  () {
+			this.style.left = '0px';
+		}
+		
+		mydiv1.onmouseout = function  () {
+			this.style.left = '-100px';
+		}
+	</script>
+</html>
