@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="div111">
+			div
+		</div>
+		<div class="div111 div1ss" id="div2">
+			div
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div1 = document.getElementsByTagName('div');
+		var div2 = document.getElementById('div2');
+		
+		
+		var div2_arr = div2.className.split(' ');
+		
+		Remove_Class(div2_arr,'div1ss');
+		
+		function Remove_Class (obj,classname) {
+			if(obj.className == '')
+			{
+				
+			}
+			else
+			{
+				var count = The_Class(div2_arr,classname);
+	
+				if(count >= 0)
+				{
+					alert(div2_arr.splice(count,1));
+					
+					div2.className = div2_arr.join(' ');
+				}
+			}
+		}
+	
+		Add_Class(div1[0],'div222');
+	
+		function Add_Class (obj, classname) {
+			
+			if(obj.className == '')
+			{
+				obj.className = classname;
+				alert(2)
+			}
+			else
+			{
+				var temp = obj.className.split(' ');
+				
+				if(The_Class(temp,classname))
+				{
+					return;
+				}
+				else
+				{
+					obj.className += ' ' + classname;
+				}
+			}
+		}
+		
+		function The_Class (obj,classname) {
+			for (var i = 0; i < obj.length; ++i) {
+				if(obj[i] == classname)
+				{
+					return i;
+				}
+			}
+			
+			return -1;
+		}
+	</script>
+</html>

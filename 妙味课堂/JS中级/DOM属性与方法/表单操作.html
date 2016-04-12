@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post" id = 'form1'>
+			
+			<input type="text"  name="text1" value="表单"/>
+			<input type="radio" name="sex" id="" value="男" />男
+			<input type="radio" name="sex" id="" value="女" />女
+			
+			<input type="checkbox" name="a" id="" value="javascripts" />javascripts
+			<input type="checkbox" name="a" id="" value="css" />css
+			<input type="checkbox" name="a" id="" value="Html5" />Html5
+			
+			<input type="" name="" id="" value="" />
+			
+			<select name="city" >
+				<option value="上海">上海</option>
+				<option value="北京">北京</option>
+			</select>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var form1 = document.getElementById('form1');
+	
+		form1.text1.onchange = function  () {
+			
+		}
+		
+		form1.a[0].onchange = function  () {
+			alert(form1.a[2].value)
+		}
+		
+		form1.city.onclick = function  () {
+			alert(this.value);
+		}
+//		form1
+	</script>
+</html>
