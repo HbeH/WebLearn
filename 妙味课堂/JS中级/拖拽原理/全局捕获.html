@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="but1" id="but1" value="按钮1" />
+		<input type="button" name="but2" id="but2" value="按钮2" />
+	</body>
+	<script type="text/javascript">
+		var myBut = document.getElementsByTagName('input');
+		
+		myBut[0].setCapture();
+		
+		myBut[0].onclick = function  () {
+			
+			alert(1)
+		}
+		
+		myBut[1].onclick = function  () {
+			alert(2)
+		}
+	</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="" />
+		<ul id = 'ul1'></ul>
+	</body>
+	<script type="text/javascript">
+		var myText = document.getElementsByTagName('input');
+		var myUl =  document.getElementById('ul1');
+		
+		myText[0].onkeyup = function  (ev) {
+			
+			var ev = ev || event;
+			var myli = document.createElement('li');
+			myli.innerHTML = this.value;
+			
+			if(ev.keyCode == 13)
+			{
+				if(myUl.children[0])
+				{
+					myUl.insertBefore(myli,myText[0].children[0])
+				}
+				else
+				{
+					myUl.appendChild(myli)
+				}
+			}
+			
+		}
+	</script>
+</html>

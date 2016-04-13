@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		function  f1 () {
+			alert(this);
+		}
+		
+		function  f2 () {
+			alert('fn2');
+		}
+		
+//		document.onclick = f1;
+//		document.onclick = f2;
+
+//		document.attachEvent('onclick',f1);
+//		document.attachEvent('onclick',f2);
+
+//		document.addEventListener('click',f1,false);
+//		document.addEventListener('click',f2,false);
+
+	f1.call(22);
+	</script>
+</html>

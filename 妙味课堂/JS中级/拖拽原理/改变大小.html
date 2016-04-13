@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mydiv{background: red;width: 100px;height: 100px;position: absolute;left: 400px;top: 200px;}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var mydiv = document.getElementById('mydiv');
+		
+		mydiv.onmousedown = function  (ev) {
+			
+			var ev = ev || event;
+			var direction = null;
+			var myWidth = mydiv.offsetWidth;
+			var the_ev_clientx = ev.clientX;
+			var myLeft = mydiv.offsetLeft;
+			
+			if(the_ev_clientx > myLeft + myWidth - 10)
+			{
+				direction = 'right';	
+			}
+			
+			if(the_ev_clientx < myLeft + 10)
+			{
+				direction = 'left';
+			}
+			
+			document.onmousemove = function  (ev) {
+				var ev = ev || event;
+				
+				switch(direction)
+				{
+					case 'right':
+						mydiv.style.width = ev.clientX - the_ev_clientx + myWidth + 'px';
+						break;
+					case 'left':
+						mydiv.style.width = myWidth - ( ev.clientX - the_ev_clientx) + 'px';
+						mydiv.style.left = ev.clientX - the_ev_clientx + myLeft + 'px';
+						break;
+				}
+			}
+			
+			document.onmouseup = function  () {
+				document.onmousemove = document.onmousedown = null;
+			}
+			
+			if(ev.clientY > mydiv.offsetTop + mydiv.offsetHeight - 10)
+			{
+				alert('bottom')
+			}
+			
+			if(ev.clientY < mydiv.offsetTop + 20)
+			{
+				alert('top')
+			}
+		}
+	</script>
+</html>

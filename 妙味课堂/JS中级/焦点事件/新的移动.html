@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{background: red;width: 100px;height: 100px;position: absolute;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var mydiv = document.getElementById('div1');
+		
+		document.onkeydown = function  (ev) {
+			var ev = ev || event;
+			
+			switch(ev.keyCode)
+			{
+				case 37:
+					mydiv.style.left = mydiv.offsetLeft - 10 + 'px';
+					break;
+				case 38:
+					mydiv.style.top = mydiv.offsetTop - 10 + 'px';
+					break;
+				case 39:
+					mydiv.style.left = mydiv.offsetLeft + 10 + 'px';
+					break;
+				case 40:
+					mydiv.style.top = mydiv.offsetTop + 10 + 'px';
+			}
+		}
+	</script>
+</html>
