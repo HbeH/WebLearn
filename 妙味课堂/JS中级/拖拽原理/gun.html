@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{background: black;width: 30px;height: 470px;position: absolute;top: 10px;left: 10px;}
+			#div2{background: red;width: 30px;height: 30px;position: absolute;top: 0px;left: 0px;}
+			/*#div3{background: cadetblue;width: 300px;height: 0px;margin: 10px 60px;}*/
+			#div4{border: 1px solid black;width: 400px;height: 300px;position: absolute;left: 50px; top: 10px;overflow: hidden;}
+			#div5{position: absolute;left: 0px;top: 0px;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+			fff
+			</div>
+		</div>
+		
+		<div id="div3">
+			
+		</div>
+		<div id="div4">
+			<div id="div5">
+
+				最佳答案1~2名：奖励泰课在线100元优惠券/800泰课币/泰斗游戏鼠标/《创游记》
+优秀奖若干名（根据答题数量和质量）：奖励1~300泰斗币。可在积分商城兑换物品或购买插件，源码等资源。
+
+
+本期10道题：
+ 
+1.一个场景放置多个camera并同时处于活动状态，会发生什么？
+
+2.C#中的排序方式有哪些？请写一个你熟悉的。
+
+3.射线检测碰撞物的原理是？
+
+4.Unity中，照相机的Clipping Planes的作用是什么？调整Near、Fare两个值时，应该注意什么？
+
+5.c#语言是什么的基础
+
+6.元素类型为int的2行5列的二维数组供占用多少字节的储蓄空间？ 
+
+7.什么是装箱和拆箱？
+
+8、编写Test类包含Min方法实现找出数组元素中最小值并在Main中调用Min方法
+最终显示的结果。
+
+9：float4 _MainTex_ST 中的_MainTex_ST变量也没有用到，为啥非要声明一下？
+
+10. 分析值类型和引用类型的不同之处？
+
+回帖仅管理员可见，每周五开放查看&公布答案。
+  
+
+
+
+活动规则：
+
+我们每期会整理10道Unity技术相关的问题，大家在帖子里回复作答。
+
+活动截止日期为每周四的23：59分。周五进行分数评定，并且公布获奖名单。
+
+分数将根据下列标准综合评定：
+1，回答时间
+2，回答题数
+3，答案正确率
+4，答案工整度（回帖格式是否清晰易读，代码是否放在代码块内） 
+（示例）
+
+  
+5，答案完善度（如举例是否恰当，描述是否清晰，答案的相关扩展）
+6，不与他人答案雷同（答案不唯一的题目）
+7，其他（待完善）
+
+
+如果你在学习或工作中，遇到不会的问题可以发到问答版块，我们也会从中挑选经典问题放入每周题库，并奖励100泰课币。
+
+往期问题回顾
+希望大家积极参与，人人有奖拿，人人当主城，666  
+拿如果感觉自己能力不错，那么每一期的威客项目也不可错过，不仅有大量泰斗币可以拿，而且还有现金
+
+威客项目
+ 
+每周一下午发布新威客项目，静候参与！
+
+泰斗威客项目027_热血格斗：http://www.taidous.com/bbs/thread-39940-1-1.html 
+
+
+
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div1 = document.getElementById('div1');
+		var div2 = document.getElementById('div2');
+//		var div3 = document.getElementById('div3');
+		var div4 = document.getElementById('div4');
+		var div5 = document.getElementById('div5');
+		
+		
+		var max_Top = div1.offsetHeight - div2.offsetHeight;
+		
+		div2.onmousedown = function  (ev) {
+			var ev = ev || event;
+			
+			var temp_height = ev.clientY - div2.offsetHeight;
+			
+			document.onmousemove = function  (ev) {
+				var ev = ev || event;
+				var temp_H = ev.clientY - temp_height;
+				
+				if(temp_H < 0)
+				{
+					temp_H = 0;
+				}
+				else if(temp_H > max_Top)
+				{
+					temp_H = max_Top;
+				}
+				
+				div2.style.top = temp_H + 'px';
+				
+				var The_silce = temp_H / max_Top;
+				
+//				div3.style.height = 470 * The_silce + 'px';
+				div5.style.top = (div4.clientHeight - div5.offsetHeight) * The_silce +'px';
+			}
+			
+			document.onmouseup = function  () {
+				document.onmouseup = document.onmousemove = null;
+			}
+		}
+	</script>
+</html>
