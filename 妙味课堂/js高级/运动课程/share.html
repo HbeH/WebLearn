@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{background: #CCC;width: 100px;height: 200px;position: absolute;top: 10px;left: -100px;}
+			#div1 span{background: yellow;width: 30px;height: 60px;position: absolute;left: 100px;top: 0px;}
+		</style>
+	</head>
+	<body>
+		<div id="div1" >
+			<span>
+				分享到
+			</span>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div1 = document.getElementById('div1');
+		var in_move = null;
+		var speed = null;
+		
+		div1.onmouseover = function  () {
+			show(0);
+		}
+		
+		div1.onmouseout = function  () {
+			show(-100);
+		}
+		
+		function  show (distance) 
+		{
+			if(div1.offsetLeft < distance)
+			{
+				speed = 10;
+			}
+			else if(div1.offsetLeft > distance)
+			{
+				speed = -10;
+			}
+			
+			clearInterval(in_move);
+			
+			in_move = setInterval(function  () 
+			{
+				if(div1.offsetLeft == distance)
+				{
+					clearInterval(in_move);
+				}
+				else
+				{
+					div1.style.left = div1.offsetLeft +speed + 'px';
+				}
+			},30)
+		}
+		
+		
+	</script>
+</html>
