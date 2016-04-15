@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{background: red;width: 100px;height: 30px;margin-top: 30px;}
+		</style>
+	</head>
+	<body>
+		<div >
+			
+		</div>
+		<div >
+			
+		</div>
+		<div >
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var divv = document.getElementsByTagName('div');
+		var speed = null;
+		var timer = null;
+		
+		for (var i = 0; i <divv.length; ++i) {
+			
+			divv[i].timer = null;
+			divv[i].onmouseover = function  () {
+				
+				StartMove(this,300);
+			}
+			
+			divv[i].onmouseout = function  () {
+			
+				StartMove(this,70);
+			}
+		}
+		
+		
+		function  StartMove (obj,target) {
+			
+			clearInterval(obj.timer);
+			
+			obj.timer = setInterval(function  () {
+				
+				speed = (target - obj.offsetWidth) / 8;
+				speed = speed > 0 ? Math.ceil(speed) :Math.floor(speed);
+			
+				if(obj.offsetWidth == target)
+				{
+					clearInterval(obj.timer);
+				}
+				else
+				{
+					obj.style.width = obj.offsetWidth + speed + 'px';
+				}
+				
+			},30)
+			
+		}
+	</script>
+</html>

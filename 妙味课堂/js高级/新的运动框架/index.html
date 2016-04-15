@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#div1{background: red;width: 100px;height: 30px;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div1 = document.getElementById('div1');
+		var speed = null;
+		var timer = null;
+		
+		div1.onmouseover = function  () {
+			StartMove(300);
+		}
+		div1.onmouseout = function  () {
+			StartMove(100);
+		} 
+		
+		function  StartMove (target) {
+			
+			clearInterval(timer)
+			speed = (target - div1.offsetWidth) / 8;
+			speed = speed > 0 ? Math.ceil(speed) :Math.floor(speed);
+			
+			timer = setInterval(function  () {
+				
+				if(div1.offsetWidth == target)
+				{
+					clearInterval(timer);
+				}
+				else
+				{
+					div1.style.width = div1.offsetWidth + speed + 'px';
+				}
+				
+			},30)
+			
+		}
+	</script>
+</html>

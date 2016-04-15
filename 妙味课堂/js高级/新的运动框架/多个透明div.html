@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{width: 100px;height: 100px;background: red;margin-top: 20px;opacity: 0.3;}
+		</style>
+	</head>
+	<body>
+		<div id="">
+			
+		</div>
+		<div id="">
+			
+		</div>
+		<div id="">
+			
+		</div>
+		<div id="">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var mydov = document.getElementsByTagName('div');
+		var alpha = 30;
+		
+		for (var i = 0; i < mydov.length; ++i) {
+			mydov[i].time = null;
+			mydov[i].alpha = 30;
+			mydov[i].onmouseover = function  () {
+				startMove(this,100);
+			}
+			
+			mydov[i].onmouseout = function  () {
+				startMove(this,30);
+			}
+		}
+		
+		function  startMove (obj,target) {
+			clearInterval(obj.time);
+			
+			obj.time = setInterval(function () {
+				var speed = (target - obj.alpha) / 8;
+				speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+				
+				if(obj.alpha == target)
+				{
+					clearInterval(obj.time);
+				}
+				else
+				{
+					obj.alpha += speed;
+					obj.style.opacity = obj.alpha / 100;
+				}
+				
+			},30)
+			
+		}
+	</script>
+</html>

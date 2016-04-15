@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{background: red;height: 70px;border: 1px solid black;}
+		</style>
+	</head>
+	<body>
+		<div id="div1" style="width: 200px;">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		setInterval(function  () {
+			var dov1 = document.getElementById('div1');
+			
+			dov1.style.width = parseInt(dov1.style.width) - 1 + 'px';
+		},30)
+	</script>
+</html>

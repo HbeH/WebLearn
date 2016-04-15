@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{background: red;width: 200px;height: 70px;border: 1px solid black;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+	
+		function  getStyle (obj,arr) {
+			if(obj.currentStyle)
+			{
+				return obj.currentStyle[arr];
+			}
+			else
+			{
+				return getComputedStyle(obj,false)[arr];
+			}
+		}
+		setInterval(function  () {
+			var dov1 = document.getElementById('div1');
+			
+			dov1.style.width = parseInt(getStyle(dov1,'width')) - 1 + 'px';
+		},30)
+	</script>
+</html>
