@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{background: red;width: 100px;height: 100px;opacity: 0.3;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var div1 = document.getElementById('div1');
+		var timer = null;
+		
+		div1.onmouseover = function  () {
+			StartChange(this,'opacity',100);
+		}
+		
+		div1.onmouseout = function  () {
+			StartChange(this,'opacity',20);
+		}
+		
+		function  getStyle (obj,attr) {
+			if(obj.currentStyle)
+			{
+				return obj.currentStyle[attr];
+			}
+			else
+			{
+				return getComputedStyle(obj,false)[attr];
+			}
+		}
+		
+		function  StartChange (obj,attr,target) {
+			clearInterval(timer);
+			var myTemp = null;
+			
+			if(attr === 'opacity')
+			{
+				myTemp = parseInt(parseFloat(getStyle(obj,attr)) * 100);
+			}
+			else
+			{
+				myTemp = parseInt(getStyle(obj,attr));
+			}
+			
+			timer = setInterval(function  () {
+				
+				var change_speed = (target - myTemp) / 8;
+				change_speed = change_speed > 0 ? Math.ceil(change_speed) : Math.floor(change_speed);
+				
+				if(myTemp == target)
+				{
+					clearInterval(timer);
+				}
+				else
+				{
+					if(attr === 'opacity')
+					{
+						myTemp += change_speed;
+						obj.style.opacity = myTemp / 100;
+					}
+					else
+					{
+						obj.style[attr] = myTemp + change_speed + 'px';
+					}
+				}
+			
+			},30)
+			
+		
+		}
+	</script>
+</html>

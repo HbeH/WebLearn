@@ -23,18 +23,31 @@
 		var speed = null;
 		var timer = null;
 		
-		for (var i = 0; i <divv.length; ++i) {
+//		for (var i = 0; i <divv.length; ++i) {
+//			
+//			divv[i].timer = null;
+//			divv[i].onmouseover = function  () {
+//				
+//				StartMove(this,300);
+//			}
+//			
+//			divv[i].onmouseout = function  () {
+//			
+//				StartMove(this,70);
+//			}
+//		}
+//		
+		divv[0].onclick = function  () {
+			StartMove(this,'width',300);
 			
-			divv[i].timer = null;
-			divv[i].onmouseover = function  () {
-				
-				StartMove(this,300);
-			}
+		}
+		divv[1].onclick = function  () {
+			StartMove(this,'height',300);
 			
-			divv[i].onmouseout = function  () {
+		}
+		divv[2].onclick = function  () {
+			StartMove(this,'background','black');
 			
-				StartMove(this,70);
-			}
 		}
 		
 		function getStyle (obj,arr) {
@@ -48,13 +61,13 @@
 			}
 		}
 		
-		function  StartMove (obj,target) {
+		function  StartMove (obj,attr,target) {
 			
 			clearInterval(obj.timer);
 			
 			obj.timer = setInterval(function  () {
 				
-				var myTemp = parseInt(getStyle(obj,'width'));
+				var myTemp = parseInt(getStyle(obj,attr));
 				
 				speed = (target - myTemp) / 8;
 				speed = speed > 0 ? Math.ceil(speed) :Math.floor(speed);
@@ -65,7 +78,7 @@
 				}
 				else
 				{
-					obj.style.width = myTemp + speed + 'px';
+					obj.style[attr] = myTemp + speed + 'px';
 				}
 				
 			},30)
