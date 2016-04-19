@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#ul1{width: 300px;height: 300px;border: 1px solid black;margin: 10px auto;overflow: hidden;}
+			#ul1 div{list-style: none;border-bottom: 1px dashed #999;padding-bottom: 2px;overflow: hidden;opacity: 0;}
+		</style>
+	</head>
+	<body>
+		<textarea name="text1" rows="10" cols="40" id="mytext"></textarea>
+		<input type="button" name="but1" id="but1" value="发布" />
+		<ul id = 'ul1'>
+			<div></div>
+		</ul>
+	</body>
+	<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var ul1 = document.getElementById('ul1');
+		var myli = ul1.getElementsByTagName('div');
+		var myBut = document.getElementById('but1');
+		var myTexe = document.getElementById('mytext');
+		
+		myBut.onclick = function  () {
+			
+			if(myTexe.value == '')
+			{
+				return;
+			}
+			var lili = document.createElement('div');
+			lili.innerHTML = myTexe.value;
+			
+			if(ul1.children[0])
+			{
+				ul1.insertBefore(lili,ul1.children[0])
+			}
+			else
+			{
+				ul1.appendChild(lili);
+			}
+			
+			myTexe.value = '';
+			var iHeight = lili.offsetHeight;
+			StartChange(lili,{height:iHeight},function  () {
+				StartChange(lili,{opacity:100});
+			});
+		}
+	</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myDiv{border: 1px solid black;position: relative;width: 1060px;margin: 0 auto;height: 132px;overflow: hidden;}
+			#myDiv ul{position: absolute;}
+			#ul1 li{list-style: none; width: 150px;height: 122px;float: left;padding: 10px;}
+			#ul1 li img{width: 150px;}
+		</style>
+	</head>
+	<body>
+		<div id="myDiv">
+			<ul id = 'ul1'>
+				<li><img src="img/1.jpg"/></li>
+				<li><img src="img/2.jpg"/></li>
+				<li><img src="img/3.jpg"/></li>
+				<li><img src="img/4.jpg"/></li>
+				<li><img src="img/5.jpg"/></li>
+				<li><img src="img/6.jpg"/></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var mydiv = document.getElementById('myDiv');
+			var myul = mydiv.getElementsByTagName('ul')[0];
+			var myli = myul.getElementsByTagName('li');
+			
+			myul.innerHTML += myul.innerHTML;
+			myul.style.width = myli[0].offsetWidth *myli.length;
+			alert(myul.style.width)
+			var the_left = myul.offsetWidth;
+			var my_left = myul.style.width;
+			
+			var timer = setInterval(function  () {
+				if(myul.offsetLeft < -the_left)
+				{
+					myul.style.left = my_left - 40 + 'px';
+				}
+				
+				myul.style.left = myul.offsetLeft + 10 + 'px';
+				alert()
+			},30)
+		</script>
+	</body>
+</html>

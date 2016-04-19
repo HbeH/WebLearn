@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#ul1{width: 366px;margin: 0 auto;}
+			#ul1 li{border: 1px solid black;background: #CCC;float: left;margin: 10px;width: 100px;height: 100px;list-style: none;z-index: 1;}
+		</style>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+	<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var ul1 = document.getElementById('ul1');
+		var myli = ul1.getElementsByTagName('li');
+		var the_index = 1;
+		
+		for (var i = 0; i < myli.length; ++i) {
+			myli[i].style.left = myli[i].offsetLeft + 'px';
+			myli[i].style.top = myli[i].offsetTop + 'px';
+		}
+		
+		for (var i = 0; i < myli.length; ++i) {
+			myli[i].style.margin = 0;
+			myli[i].style.position = 'absolute';
+		}
+		
+		for (var i =0 ; i < myli.length; ++i) {
+			myli[i].onmouseover = function  () {
+				this.style.zIndex = the_index++;
+				StartChange(this,{width:200,height:200,marginLeft:-50,marginTop:-50})
+			}
+			
+			myli[i].onmouseout = function  () {
+				StartChange(this,{width:100,height:100,marginLeft:0,marginTop:0})
+			}
+		}
+	</script>
+</html>
