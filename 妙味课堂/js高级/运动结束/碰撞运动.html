@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{background: red;width: 100px;height: 100px;position: absolute;}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="but" id="but" value="Start" />
+		<div id="div1">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var mydiv = document.getElementById('div1');
+		var mybut = document.getElementById('but');
+		var Xspeed = 6;
+		var Yspeed = 8;
+		
+		mybut.onclick = function () {
+			setInterval(function  () {
+				mydiv.style.left = mydiv.offsetLeft + Xspeed + 'px';
+				mydiv.style.top = mydiv.offsetTop +  Yspeed + 'px';
+				
+			},30)
+		}
+		
+	
+		
+	</script>
+</html>

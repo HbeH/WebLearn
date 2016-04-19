@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			li{list-style: none;}
+			
+			 ul{width: 400px;height: 30px;position: relative;margin: 100px auto 0;}
+			 ul li{float: left;list-style: none;border: 1px solid black;width: 98px;height: 28px;line-height: 28px;text-align: center;z-index: 2;position: relative;cursor: pointer;}
+			 .bg{border: none;width: 100px;height: 5px;overflow: hidden;background: red;position: absolute;top: 24px;left: 0;z-index: 1;}
+		</style>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>首页</li>
+			<li>产品</li>
+			<li>关于我们</li>
+			<li>联系方式</li>
+			<li class="bg"></li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var speed = 0;
+		var left = 0;
+		
+		function  startMove (obj,target) {
+			clearInterval(obj.timer);
+			
+			if(Math.abs(speed) < 1 && Math.abs(left - target) < 1)
+			{
+				obj.style.offsetLeft = target + 'px';
+				clearInterval(obj.timer)	
+			}
+			else
+			{
+				obj.timer = setInterval(function  () {
+					speed += (target - obj.offsetLeft) / 5;
+					speed *= 0.7;
+					
+					left += speed;
+					
+					obj.style.left = left + 'px';
+				},30)
+			}
+			
+		}
+		
+		var myul = document.getElementById('ul1');
+		var myli = myul.getElementsByTagName('li');
+		var bg = myli[myli.length - 1];
+		
+		for (var i = 0; i < myli.length - 1; ++i) {
+			myli[i].onmouseover = function  () {
+				startMove(bg,this.offsetLeft);
+			}
+		}
+	</script>
+</html>

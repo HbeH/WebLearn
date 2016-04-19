@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{background: red;width: 200px;height: 50px;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var height = 50;
+		var speed = 0;
+		
+		function  startCgange (obj,target) {
+			
+			clearInterval(obj.timer);
+				
+			obj.timer = setInterval(function  () {
+				speed += (target - obj.offsetHeight) / 5;
+				speed *= 0.7;
+				
+				if(Math.abs(speed) < 1 && Math.abs(target - obj.offsetLeft) <1)
+				{
+					clearInterval(obj.timer);
+					obj.style.height = target + 'px';
+				}
+				else
+				{
+					height += speed;
+					obj.style.height = height + 'px';
+				}
+				
+			},30)
+		}
+		
+		var mydiv = document.getElementById('div1');
+		mydiv.onmouseover = function  () {
+			startCgange(this,200);
+		}
+		
+		mydiv.onmouseout = function  () {
+			startCgange(this,50);
+		}
+	</script>
+</html>

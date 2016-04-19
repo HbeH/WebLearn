@@ -5,6 +5,7 @@
 		<title></title>
 		<style type="text/css">
 			#div1{background: red;width: 100px;height: 100px;margin: 10px;position: absolute;}
+			#div2{background: black;height: 300px;width: 1px;position: absolute;left: 300px;}
 		</style>
 	</head>
 	<body>
@@ -12,24 +13,20 @@
 		<div id="div1">
 			
 		</div>
+		<div id="div2">
+			
+		</div>
 	</body>
 	<script type="text/javascript">
 		var mybut = document.getElementById('but');
 		var mydiv = document.getElementById('div1');
-		var speed = 10;
+		var speed = 0;
 		
 		mybut.onclick = function  () {
 			var timer = setInterval(function  () {
-				if(speed < -10)
-				{
-					++speed;
-					
-					alert(speed)
-				}
-				else
-				{
-					--speed;
-				}
+			
+					speed += (300 - mydiv.offsetLeft) / 5;
+					speed *= 0.7;
 				mydiv.style.left = mydiv.offsetLeft + speed + 'px';		
 			},30)
 		}
