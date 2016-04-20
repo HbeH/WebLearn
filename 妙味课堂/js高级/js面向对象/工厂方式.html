@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function  CreatePeroson (name,sex) {
+			var obj = new Object();
+			obj.name = name;
+			obj.sex = sex;
+			
+			obj.showName = function  () {
+				alert(this.name);
+			}
+			
+			obj.showSex = function  () {
+				alert(this.sex);
+			}
+			
+			return obj;
+		}
+		
+		var p1 = CreatePeroson('dzq','pig');
+		var p2 = CreatePeroson('sb','shacha');
+		
+		p1.showName();
+		p1.showSex();
+		p2.showName();
+		p2.showSex();
+		
+	</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{background: red;width: 100px;height: 100px;position: absolute;}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="but" id="but" value="Start" />
+		<div id="div1">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var mydiv = document.getElementById('div1');
+		var mybut = document.getElementById('but');
+		var Xspeed = 6;
+		var Yspeed = 8;
+		
+		mybut.onclick = function () {
+			setInterval(function  () {
+				
+				var l = mydiv.offsetLeft + Xspeed;
+				var t = mydiv.offsetTop  +  Yspeed;
+				
+				++Yspeed;
+				if(t >= document.documentElement.clientHeight - mydiv.offsetHeight)
+				{
+					Yspeed *= -0.8;
+					t = document.documentElement.clientHeight - mydiv.offsetHeight;
+				}
+				else if(t <= 0)
+				{
+					Yspeed *= 0.8;
+					t = 0;
+				}
+				
+			 	if(l >= document.documentElement.clientWidth - mydiv.offsetWidth)
+				{
+					Xspeed *= -0.8;
+					l =  document.documentElement.clientWidth - mydiv.offsetWidth;
+				}
+				else if(l <= 0)
+				{
+					Xspeed *= -0.8;
+					l = 0;
+				}
+				
+				mydiv.style.left = l + 'px';
+				mydiv.style.top = t + 'px';
+				
+			},30)
+		}
+		
+	
+		
+	</script>
+</html>

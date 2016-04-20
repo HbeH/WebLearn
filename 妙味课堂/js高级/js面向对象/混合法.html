@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function  CreatePeroson (name,sex) {
+			this.name = name;
+			this.sex = sex;
+		}
+		
+		CreatePeroson.prototype.showName = function  () {
+			alert(this.name);
+		}
+		
+		CreatePeroson.prototype.showSex = function  () {
+			alert(this.sex);
+		}
+		var p1 = new CreatePeroson('dzq','pig');
+		var p2 = new CreatePeroson('sb','shacha');
+		
+		p1.showName();
+		p1.showSex();
+		p2.showName();
+		p2.showSex();
+		
+		alert(p1.showName == p2.showName)
+		
+	</script>
+</html>

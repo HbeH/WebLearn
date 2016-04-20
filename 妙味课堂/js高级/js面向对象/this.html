@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function  Aaa () {
+			this.a = 12;
+			var _this = this;
+			
+			setInterval(function  () {
+				_this.showA();
+			},30);
+		}
+		
+		Aaa.prototype.showA = function  () {
+			alert(this.a);
+		}
+		
+		var pbj = new Aaa();
+	</script>
+</html>
