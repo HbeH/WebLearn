@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	
+		function Person (name,xingge) {
+			this.name = name;
+			this.xingge = xingge;
+		}
+		
+		Person.prototype.showName = function  () {
+			alert(this.name + '是贱人');
+		}
+		
+		Person.prototype.showSex = function  () {
+			alert(this.xingge + 'dzq youhu 最贱')
+		}
+		
+//		var p1 = new Person('dzq','jianren')
+//		p1.showName();
+		
+		
+		function Worker (name,xingge,job) {
+			Person.call(this,name,xingge);
+			this.job = job;
+		}
+		
+		Worker.prototype = Person.prototype;
+		
+		Worker.prototype.showJob = function  () {
+			alert(this.job)
+		}
+		
+		var w1 = new Worker('youhu','jB','pianzi');
+		w1.showName();
+		w1.showSex();
+		w1.showJob();
+		
+	</script>
+</html>
