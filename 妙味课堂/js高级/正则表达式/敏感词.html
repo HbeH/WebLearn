@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		转换前<textarea name="" rows="10" cols="40" id="text1"></textarea>
+		<input type="button" name="but1" id="but1" value="过滤" />
+		转换后<textarea name="" rows="10" cols="40" id="text2"></textarea>
+	</body>
+	<script type="text/javascript">
+		var text1 = document.getElementById('text1');
+		var text2 = document.getElementById('text2');
+		var but1 = document.getElementById('but1');
+		
+		but1.onclick = function  () {
+			var str = text1.value;
+			var tempstr = str.replace(/我们|你们|他们/g,'****');
+			alert(tempstr)
+			text2.value = tempstr;
+		}
+	</script>
+</html>

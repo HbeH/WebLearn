@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str = '123,3df,45gh,45,343fggf34,5df445';
+		var arr = [];
+		var temp = '';
+		
+		for (var i = 0; i < str.length; ++i) {
+			if(str.charAt(i) >= '0' && str.charAt(i) <= '9')
+			{
+				temp += str[i];
+			}
+			else
+			{
+				if(temp)
+				{
+					arr.push(temp);
+					temp = '';
+				}
+			}
+		}
+		
+		if(temp)
+		{
+			arr.push(temp);
+		}
+		
+		for (var i = 0; i < arr.length; ++i) {
+			alert(arr[i]);
+		}
+	</script>
+</html>
