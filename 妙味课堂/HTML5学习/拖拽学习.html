@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#one{width: 200px;height: 200px;border: 1px solid blue;}
+			#two{width: 100px;height: 100px;border: 1px solid red;margin-top: 20px;}
+		</style>
+	</head>
+	<body>
+		<div id="one">
+			
+		</div>
+		
+		<div id="two" draggable="true">
+			请拖拽我
+		</div>
+	</body>
+	<script type="text/javascript">
+		var mydiv = document.getElementsByTagName('div');
+		
+//		mydiv[1].ondragstart = function  () {
+//			mydiv[0].innerHTML = '开始';
+//		}
+//		
+//		mydiv[1].ondrag = function  () {
+//			mydiv[0].innerHTML = '移动';
+//		}
+//		
+//		mydiv[1].ondragend = function  () {
+//			mydiv[0].innerHTML = '结束';
+//		}
+		
+		mydiv[0].ondragenter = function  (e) {
+			e.dataTransfer.setData('text','aa')
+			mydiv[0].innerHTML = '进入';
+			
+			e.preventDefault();
+		}
+		
+		mydiv[0].ondragover = function  (e) {
+			mydiv[0].innerHTML = '移动';
+			
+			e.preventDefault();
+		}
+		
+		mydiv[0].ondragleave = function  (e) {
+			mydiv[0].innerHTML = '离开';
+			
+			e.preventDefault();
+		}
+		
+		mydiv[0].ondrop = function  (e) {
+			e.preventDefault();
+			alert(e.dataTransfer.getData('text'));
+			mydiv[0].appendChild(mydiv[1]);
+		}
+	</script>
+</html>

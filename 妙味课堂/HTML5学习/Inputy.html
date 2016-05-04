@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body contenteditable="true">
+		学生姓名：<input type="text" name="" id="" value="张三"  list="li"/>
+		<datalist id="li">
+			<option>张三</option>
+			<option>甲乙</option>
+			<option>李四</option>
+		</datalist>
+	</body>
+	<script type="text/javascript">
+		var tetx= document.getElementsByTagName('input')[0];
+		
+		tetx.onchange = function  () {
+			alert(tetx.value);
+		}
+	</script>
+</html>

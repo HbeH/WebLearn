@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<progress max="10" value="0"></progress>
+	</body>
+	<script type="text/javascript">
+		var pro = document.getElementsByTagName('progress')[0];
+		
+		var t = setInterval(function function_name () {
+			
+			if(pro.value == 10)
+			{
+				clearInterval(t);
+				document.body.removeChild(pro);
+				var spans = document.createElement('span');
+				spans.innerHTML = '加载完成';
+				
+				document.body.appendChild(spans);
+			}
+			else
+			{
+				pro.value++;
+			}
+			
+		},500)
+	</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="">
+			我的生日是<time>2015</time>
+			又更新了<time datetime="2016/4/23"></time>
+			<progress max="10" value="2" ></progress>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var timer = document.getElementsByTagName('time')[0];
+		var date = new Date();
+		
+		if(date.getFullYear() == timer.innerHTML)
+		{
+			alert('生日快乐')
+		}
+		
+	</script>
+</html>
